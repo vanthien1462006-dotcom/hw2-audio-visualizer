@@ -1,1 +1,44 @@
-/* stub: filled in H2-T05 */
+/* Design tokens: the only file that declares colors, spacing, radii and font sizes. */
+
+:root {
+  --bg: #f7f7f8;
+  --surface: #ffffff;
+  --text: #1a1a1f;
+  --text-muted: #55555f;
+  --accent: #1f4fd1;
+  --accent-text: #ffffff;
+  --focus-ring: #1f4fd1;
+  --border: #767680;
+  --bar-color: #1f4fd1;
+
+  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius-md: 8px;
+  --border-width: 1px;
+  --focus-width: 3px;
+  --target-min: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111318;
+    --surface: #1b1e26;
+    --text: #eceef3;
+    --text-muted: #aab0bd;
+    --accent: #8ab4ff;
+    --accent-text: #0b1020;
+    --focus-ring: #ffd166;
+    --border: #8c93a3;
+    --bar-color: #8ab4ff;
+  }
+}

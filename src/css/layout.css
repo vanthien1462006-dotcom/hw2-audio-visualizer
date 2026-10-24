@@ -1,1 +1,96 @@
-/* stub: filled in H2-T05 */
+/* Mobile-first layout. Base styles target 375px; no media queries are needed. */
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-height: 100vh;
+  padding: var(--space-4);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+}
+
+header,
+footer,
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+footer p {
+  color: var(--text-muted);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+  line-height: 1.3;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li + li {
+  margin-top: var(--space-2);
+}
+
+button {
+  min-width: var(--target-min);
+  min-height: var(--target-min);
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: var(--accent-text);
+  border: var(--border-width) solid var(--accent);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+body > a[href="#main-content"] {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: var(--accent-text);
+  border-radius: var(--radius-md);
+  transform: translateY(-200%);
+}
+
+body > a[href="#main-content"]:focus-visible {
+  transform: none;
+}
