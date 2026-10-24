@@ -2,12 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hw2-audio-visualizer</title>
+    <meta name="description" content="A small audio player with a concurrent FIFO load queue and a canvas spectrum visualizer." />
+    <title>Audio Queue Visualizer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="/src/css/tokens.css" />
+    <link rel="stylesheet" href="/src/css/layout.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+      <h1>Audio Queue Visualizer</h1>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section aria-labelledby="tracks-heading">
+        <h2 id="tracks-heading">Tracks</h2>
+        <ul>
+          <li><button type="button" data-track-url="/assets/tracks/track-1.wav">Track 1</button></li>
+          <li><button type="button" data-track-url="/assets/tracks/track-2.wav">Track 2</button></li>
+          <li><button type="button" data-track-url="/assets/tracks/track-3.wav">Track 3</button></li>
+          <li><button type="button" data-track-url="/assets/tracks/track-4.wav">Track 4</button></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="queue-heading">
+        <h2 id="queue-heading">Queue</h2>
+        <ol id="queue-list" data-max-concurrent="2" aria-live="polite"></ol>
+      </section>
+
+      <section aria-labelledby="player-heading">
+        <h2 id="player-heading">Player</h2>
+        <button type="button" id="play-btn">Play</button>
+        <button type="button" id="pause-btn">Pause</button>
+        <button type="button" id="stop-btn">Stop</button>
+        <p id="player-status" role="status"></p>
+      </section>
+
+      <section aria-labelledby="visualizer-heading">
+        <h2 id="visualizer-heading">Visualizer</h2>
+        <canvas id="visualizer" role="img" aria-label="Frequency bars of the playing track" width="640" height="200"></canvas>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with Vite and vanilla TypeScript.</p>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
