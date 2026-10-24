@@ -242,11 +242,11 @@ Each task is one prompt and one commit. Stage only the files listed, with explic
 | H2-A2 | Add the generated sample tracks | `public/assets/tracks/track-1.wav` to `track-4.wav` | `chore(assets): add generated sample tracks` |
 | H2-T04 | Page structure | `index.html` | `feat(html): player and visualizer page structure` |
 | H2-T05 | Tokens, reset and layout | `src/css/tokens.css`, `src/css/reset.css`, `src/css/layout.css` | `feat(css): tokens, reset and layout` |
-| H2-T06 | Pure queue | `src/audio-task-queue.ts`, `src/audio-task-queue.test.ts` | `feat(ts): pure FIFO queue with concurrency limit` |
-| H2-T07 | Audio engine | `src/track-url.ts`, `src/track-url.test.ts`, `src/audio-engine.ts` | `feat(ts): audio engine with cancellable decode and cleanup` |
-| H2-T08 | Analyser frames | `src/spectrum-bars.ts`, `src/spectrum-bars.test.ts`, `src/visualizer.ts` | `feat(ts): analyser frames in a requestAnimationFrame loop` |
+| H2-T06 | Pure queue | `src/fifo-queue.ts`, `src/fifo-queue.test.ts` | `feat(ts): pure FIFO queue with concurrency limit` |
+| H2-T07 | Audio engine | `src/audio-engine.ts` | `feat(ts): audio engine with cancellable decode and cleanup` |
+| H2-T08 | Analyser frames | `src/visualizer.ts` | `feat(ts): analyser frames in a requestAnimationFrame loop` |
 | H2-T09 | View and wiring | `src/queue-view.ts`, `src/main.ts` | `feat(ts): queue view and wiring with textContent` |
-| H2-T10 | Fix (only if a check finds a defect) | Files named in the finding | `fix(audio): <finding>` |
+| H2-T10 | Memory and FPS checks | None unless a check finds a defect | `fix(audio): <finding>` |
 | H2-T11 | Documentation | `README.md` | `docs(readme): document queue design and checks` |
 
 ### 7.1 Acceptance criteria
